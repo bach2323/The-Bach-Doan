@@ -1,0 +1,263 @@
+body {
+    background-color: #f1f1f1;
+}
+
+article {
+    padding: 0 15px;
+    max-width: 1230px;
+    margin: 0 auto;
+    color: var(--nav-bg-color);
+    line-height: 1.5;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding-bottom: 30px;
+}
+
+.left-branch {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-branch {
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    border-radius: 4px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    flex: 0 0;
+}
+
+.section:hover {
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+}
+
+.section__image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.section__title {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.section__paragraph {
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.section__paragraph:last-child {
+    margin-bottom: 8px;
+}
+
+.section__contact {
+    font-style: normal;
+}
+
+.section__contact p:last-child {
+    margin-bottom: 8px;
+}
+
+.section--primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.section--primary .section__title {
+    color: white;
+}
+
+.section--primary .hr {
+    border-top-color: white;
+}
+
+.section--primary a {
+    color: white;
+    text-decoration: underline;
+}
+
+.section--secondary {
+    background-color: gray;
+    color: white;
+}
+
+.section--secondary .section__title {
+    color: white;
+}
+
+.section--secondary .hr {
+    border-top-color: white;
+}
+
+.section--secondary a {
+    color: white;
+    text-decoration: underline;
+}
+
+.hr {
+    border-top: 1px solid black;
+}
+
+.text-group {
+    margin-bottom: 30px;
+}
+
+.text-group:last-child {
+    margin-bottom: 0;
+}
+
+.text-group__title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.text-group__subtitle {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75em;
+}
+
+.text-group__text {
+    margin-bottom: 5px;
+}
+
+.social-container {
+    padding-bottom: 8px;
+}
+
+.social-container__button {
+    display: flex;
+    align-content: center;
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.social-container__button:hover {
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+}
+
+.social-container__icon {
+    width: 40px;
+    height: 40px;
+}
+
+.social-container__name {
+    margin: 0;
+    padding-left: 15px;
+    line-height: 40px;
+    color: black;
+}
+
+.link-button {
+    color: var(--primary-color);
+}
+
+.link-button.link-button--red {
+    color: #ff6447;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__label {
+    margin-bottom: 5px;
+}
+
+.contact__input {
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+.contact__required {
+    color: var(--primary-color);
+}
+.contact-form__submit {
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 0.5em;
+    line-height: 1.1;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid var(--nav-bg-color);
+    height: 0;
+}
+
+@media (max-width: 767px) {
+    .left-branch {
+        flex-basis: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1299px) {
+    .left-branch {
+        margin-left: 0px;
+        margin-right: 7.5px;
+    }
+    .right-branch {
+        margin-left: 7.5px;
+        margin-right: 0px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .left-branch {
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+    .right-branch {
+        margin-left: 15px;
+        margin-right: 0px;
+    }
+    .section {
+        margin-top: 30px;
+    }
+
+    .contact-form {
+        display: grid;
+        column-gap: 20px;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .contact--message {
+        grid-row: 1 / span 3;
+        grid-column: 2;
+    }
+
+    .contact-form__submit {
+        grid-column: span 2;
+    }
+}
