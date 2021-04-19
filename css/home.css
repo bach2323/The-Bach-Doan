@@ -1,0 +1,80 @@
+article {
+    display: grid;
+    align-items: baseline;
+    column-gap: 20px;
+    row-gap: 20px;
+    max-width: 1300px;
+    padding-bottom: 20px;
+}
+
+section.weather {
+    position: relative;
+    grid-row: span 2;
+    min-height: 300px;
+    align-self: stretch;
+}
+
+section.greeting, section.random_fact {
+    text-align: left;
+    padding: 0 15px;
+}
+
+section.greeting {
+    align-self: end;
+}
+
+#greeting-text {
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#random_fact-text {
+    font-style: italic;
+}
+
+@media only screen and (min-width: 601px) {
+    article {
+        margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 0;
+    }
+
+    section.greeting, section.random_fact {
+        text-align: left;
+        padding: 0;
+        padding-right: 20px;
+    }
+    section.greeting {
+        font-size: 20px;
+    }
+    section.random_fact {
+        font-size: 16px;
+        color: gray;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    article {
+        margin: 100px auto;
+        grid-template-columns: 500px 1fr;
+        grid-template-rows: auto 1fr;
+        column-gap: 70px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    section.greeting, section.random_fact {
+        padding: 0;
+    }
+
+    section.greeting {
+        margin: 20px 0;
+        font-size: 35px;
+        align-self: center;
+    }
+    section.random_fact {
+        font-size: 25px;
+        align-self: center;
+        margin: 10px 0;
+    }
+}
