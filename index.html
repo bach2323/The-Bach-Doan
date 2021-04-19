@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="The Bach Doan">
+    <title>The Bach Doan| Home</title>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/home_weather.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="script/home_greeting.js"></script>
+    <script src="script/home_weather.js"></script>
+    <script src="script/home_fact.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="./index.html" target="_self" class="active">Welcome</a>
+            <a href="./places.html" target="_self">Places Around Vancouver</a>
+            <a href="./about-me.html" target="_self">About me</a>
+            <a href="./contactme.html" target="_self">Contact Me</a>
+        </nav>
+    </header>
+
+    <article>
+        <section class="weather">
+            <div class='weather-image'>
+            </div>
+            <div class='weather-text hidden'>
+                <p>
+                    <span id='location'></span>
+                </p>
+                <p>
+                    <span id='temp' data-unit='C'>
+                    </span><span id='unit' class=''>°C</span>
+                </p>
+                <p>
+                    <span id='condition'></span>
+                </p>
+            </div>
+            <p class="hidden" id="weather-error">I couldn't get your weather data :(</p>
+            <a class="hidden" id="weather-image-source">Image source</a>
+            <div class='loader'>
+            </div>
+        </section>
+        <section class="greeting">
+            <p id="greeting-text">Hello, There! Might be this random fact is good for you:</p>
+        </section>
+        <section class="random_fact">
+            <p id="random_fact-text"></p>
+        </section>
+    </article>
+
+    <footer>
+        <div id="footer-content">
+            <small>
+                The Bach Doan &copy; 2021, CSIS 1280 <br>
+                Images from <a href="https://unsplash.com" target="_blank">Unsplash</a> <br>
+                Weather API from <a href="https://fcc-weather-api.glitch.me/api/current" target="_blank">FreeCodeCamp</a><br>
+                Random fact API from <a href="https://uselessfacts.jsph.pl/random.json?language=en" target="_blank">Random Useless Facts</a>
+            </small>
+        </div>
+    </footer>
+</body>
+
+</html>
